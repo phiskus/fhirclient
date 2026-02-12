@@ -1,0 +1,10 @@
+services:
+  fhirclient:
+    build:
+      context: .
+      args:
+        NEXT_PUBLIC_FHIR_SERVER_URL: https://fhir-bootcamp.medblocks.com/fhir
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=production
